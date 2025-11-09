@@ -25,7 +25,8 @@
 - [x] フィードバック対応（15項目中12項目完了）
 - [x] テスト
 - [x] GitHubリポジトリ作成・プッシュ
-- [ ] Streamlit Cloudへのデプロイ
+- [x] Streamlit Cloudデプロイ準備完了
+- [ ] Streamlit Cloudへのデプロイ（ユーザー操作が必要）
 
 ### 機能実装状況
 
@@ -115,6 +116,12 @@
 - **リポジトリURL**: https://github.com/YunSeunghwan/PanaLunchNavi.git
 - **ブランチ**: main
 - **ステータス**: 接続完了、コードプッシュ完了
+
+### Streamlit Cloudデプロイ情報
+- **デプロイ準備**: ✅ 完了
+- **設定ファイル**: `.streamlit/config.toml` 作成済み
+- **デプロイ手順**: README.mdに記載
+- **次のステップ**: Streamlit CloudのWebサイトでデプロイを実行
 
 ---
 

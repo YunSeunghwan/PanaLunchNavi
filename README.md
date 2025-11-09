@@ -17,8 +17,8 @@ Panasonic社員向けのランチ情報共有アプリです。外部のラン�
 
 1. リポジトリをクローン
 ```bash
-git clone <repository-url>
-cd 20251109_PanaLaunchNavi
+git clone https://github.com/YunSeunghwan/PanaLunchNavi.git
+cd PanaLunchNavi
 ```
 
 2. 依存パッケージをインストール
@@ -42,6 +42,9 @@ streamlit run app.py
 ├── requirements.txt       # Pythonパッケージ一覧
 ├── plan.md               # 開発計画・進捗管理
 ├── README.md             # プロジェクト説明
+├── .gitignore            # Git除外設定
+├── .streamlit/           # Streamlit設定
+│   └── config.toml       # Streamlit設定ファイル
 └── docs/                 # ドキュメント
     ├── project_v2.md     # 企画書
     └── project_specifications.md  # 仕様書
@@ -66,6 +69,43 @@ streamlit run app.py
 ## 👥 開発チーム
 
 ゆんチーム（開発者2名）
+
+## 🚀 Streamlit Cloudへのデプロイ
+
+### デプロイ手順
+
+1. **Streamlit Cloudにアクセス**
+   - https://streamlit.io/cloud にアクセス
+   - GitHubアカウントでサインイン（まだアカウントがない場合は作成）
+
+2. **新しいアプリを作成**
+   - ダッシュボードから "New app" をクリック
+   - 以下の情報を入力：
+     - **Repository**: `YunSeunghwan/PanaLunchNavi`
+     - **Branch**: `main`
+     - **Main file**: `app.py`
+     - **App URL**: 自動生成されます（例: `pana-lunch-navi.streamlit.app`）
+
+3. **デプロイ開始**
+   - "Deploy" をクリック
+   - デプロイが完了するまで数分待ちます
+   - デプロイが完了すると、自動的にアプリのURLが表示されます
+
+4. **動作確認**
+   - デプロイされたアプリのURLにアクセス
+   - 各機能が正常に動作することを確認
+
+### デプロイ後の注意事項
+
+- **データの永続化**: Streamlit Cloudでは、ファイルシステムへの書き込みは一時的なものです。永続的なデータ保存が必要な場合は、データベース（Firestore等）の使用を検討してください。
+- **環境変数**: 必要に応じて、Streamlit Cloudの設定で環境変数を追加できます。
+
+### トラブルシューティング
+
+- デプロイが失敗する場合：
+  - `requirements.txt`が正しく設定されているか確認
+  - ログを確認してエラー内容を確認
+  - 必要に応じて `.streamlit/config.toml` の設定を確認
 
 ## 📝 ライセンス
 
